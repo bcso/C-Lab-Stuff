@@ -1,7 +1,7 @@
 [Project]
-FileName=Lab01.dev
-Name=Lab01
-UnitCount=3
+FileName=lab0103.dev
+Name=Project2
+UnitCount=1
 Type=1
 Ver=1
 ObjFiles=
@@ -18,7 +18,7 @@ Icon=
 ExeOutput=
 ObjectOutput=
 OverrideOutput=0
-OverrideOutputName=Lab01.exe
+OverrideOutputName=
 HostApplication=
 Folders=
 CommandLine=
@@ -27,10 +27,10 @@ CustomMakefile=
 IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
-CompilerSettings=0000000000000000000000
+CompilerSettings=
 
 [Unit1]
-FileName=..\..\..\..\..\..\..\..\..\Dev-Cpp\Templates\lab0101.cpp
+FileName=..\..\..\..\..\..\..\..\..\..\Dev-Cpp\Templates\lab0103.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -56,23 +56,4 @@ OriginalFilename=
 ProductName=
 ProductVersion=
 AutoIncBuildNr=0
-
-[Unit2]
-FileName=..\header.cpp
-CompileCpp=1
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit3]
-FileName=lab0102.txt
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
 
