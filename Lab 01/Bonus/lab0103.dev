@@ -30,7 +30,7 @@ CompilerSet=0
 CompilerSettings=
 
 [Unit1]
-FileName=..\..\..\..\..\..\..\..\..\..\Dev-Cpp\Templates\lab0103.cpp
+FileName=lab0103.cpp
 CompileCpp=1
 Folder=
 Compile=1
