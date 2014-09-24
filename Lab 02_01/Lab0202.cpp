@@ -71,28 +71,42 @@ int main(int argc, char *argv[])
 	double totEraBox;
 	double totPenBox;	
 
-	bool test = false;
+	char input[256];
+
     //User inputs company size 
 	cout << "Enter total company size (as positive double): ";
 	cin >> companySize;
-	while(!cin){
+	while(!cin || (companySize < 0)){
 		cin.clear();
+		//This line extracts and discards all characters waiting on the input stream
 		cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-		cout << "You have not entered a valid double value, enter a valid one";	
-		cin >> companySize;
+		cout << "Please enter a valid positive double value: ";	
+		cin >> companySize;		
 	}
-	//Source:  http://stackoverflow.com/questions/18400620/cin-for-an-int-inputing-a-char-causes-loop-that-is-supposed-to-check-input-to-go
-	
 	cout << "You have entered: " << companySize << endl;
 
     //User inputs percent of junior engineers
 	cout << "Enter percent of Junior engineers (as positive double): ";
 	cin >> percentJunEng;
+	while(!cin || (percentJunEng < 0)){
+		cin.clear();
+		//This line extracts and discards all characters waiting on the input stream
+		cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		cout << "Please enter a valid positive double value: ";	
+		cin >> percentJunEng;		
+	}	
 	cout << "You have entered: " << percentJunEng << endl;
 
     //User inputs pecent of senior engineers
 	cout << "Enter percent of Seniort engineers (as positive double): ";
 	cin >> percentSenEng;
+	while(!cin || (percentSenEng < 0)){
+		cin.clear();
+		//This line extracts and discards all characters waiting on the input stream
+		cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		cout << "Please enter a valid positive double value: ";	
+		cin >> percentSenEng;		
+	}	
 	cout << "You have entered: " << percentSenEng << endl;
 
     //Calculate percent of administrative persons
