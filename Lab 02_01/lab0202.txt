@@ -1,0 +1,35 @@
+//*********************************************
+// Student1 Name: Brian So
+// Student1 Number: 20477254
+//
+// SYDE 121 Lab: 02 Assignment: 
+//
+// Filename: lab0202.txt
+// Date submitted: September 24, 2014
+//
+// We hereby declare that this code, submitted
+// for credit for the course SYDE121, is a product
+// of our own efforts. This coded solution has
+// not been plagiarized from other sources and
+// as not been knowingly plagiarized by others.
+//
+// Pair Programming Work Declaration:
+// Student1 Name Completed 100% of the assignment.
+//
+//*********************************************
+
+Problem Instructions:
+	You are asked to create a program that can calculate the number of pencils, pens and erasers required for a certain company size and it’s Junior engineers, Senior engineers and administrative members based on a percentage of each supply each type of employee uses.
+Problem Analysis:
+	Problem statement: Compute the number of pencils, pens and erasers required given a percentage of each type of employee(junior/senior engineer, administrative) for a company size.
+	Input: 
+•	Company size
+o	Valid input: Postive Double
+•	Percentage Junior Engineer
+o	Valid input: Positive Double
+•	Percentage Senior Engineer
+o	Valid input: Positive Double
+Ouput:
+•	Boxes of pencils
+•	Boxes of pens
+•	Boxes of erasers

@@ -4,7 +4,7 @@
 //
 // SYDE 121 Lab: 02 Assignment: 
 //
-// Filename: lab0202.cpp
+// Filename: lab0201.txt
 // Date submitted: September 24, 2014
 //
 // We hereby declare that this code, submitted
@@ -17,3 +17,5 @@
 // Student1 Name Completed 100% of the assignment.
 //
 //*********************************************
+
+5. By entering 876 543 to the_int, the input is seperated into two imputs with the space as the seperator, and inputs 543 as the input to the second cin command, for the_double. The output shows this is the case. Furthermore if the input is 12.3456, it seems that it takes the 12 as an integer, and takes the trailing decimals as a double and outputs these accordingly. The input of .995 has no affect on the initialized varibles, if it is the input for cin for the_int.
