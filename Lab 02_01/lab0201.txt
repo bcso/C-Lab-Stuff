@@ -14,7 +14,7 @@
 // as not been knowingly plagiarized by others.
 //
 // Pair Programming Work Declaration:
-// Student1 Name Completed 100% of the assignment.
+// Student1 Brian So Completed 100% of the assignment.
 //
 //*********************************************
 
