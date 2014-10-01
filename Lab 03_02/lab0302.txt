@@ -1,0 +1,37 @@
+//*********************************************
+// Student1 Name: Brian So
+// Student1 Number: 20477254
+//
+// SYDE 121 Lab: 03 Assignment: 
+//
+// Filename: lab0302.txt
+// Date submitted: October 1, 2014
+//
+// We hereby declare that this code, submitted
+// for credit for the course SYDE121, is a product
+// of our own efforts. This coded solution has
+// not been plagiarized from other sources and
+// as not been knowingly plagiarized by others.
+//
+// Pair Programming Work Declaration:
+// Student1 Brian So Completed 100% of the assignment.
+//
+//*********************************************
+
+Division of an int by the int value of 0:
+
+1. No, the program crashes ungracefully.
+2. It states that it has recieved the value of 0, but the program crashes before anything else happens.
+
+Division of a double by the double value of 0.0
+
+1. No, the program crashes ungracefully.
+2. It states that it has recieved the value of 0, but the program crashes before anything else happens.
+
+Trying to compute the square root of a nevative number
+
+1. Yes.
+2. The output is 
+"Received a value of -1 
+sqrt(sqrt_arg) has a value of -1.#IND"
+

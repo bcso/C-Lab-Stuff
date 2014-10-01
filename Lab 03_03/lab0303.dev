@@ -1,6 +1,6 @@
 [Project]
-FileName=lab0301.dev
-Name=Project1
+FileName=lab0303.dev
+Name=lab0303
 UnitCount=1
 Type=1
 Ver=1
@@ -30,7 +30,7 @@ CompilerSet=0
 CompilerSettings=
 
 [Unit1]
-FileName=lab0301.cpp
+FileName=..\..\..\..\..\..\..\..\..\Dev-Cpp\Templates\lab0303.cpp
 CompileCpp=1
 Folder=
 Compile=1
