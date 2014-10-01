@@ -25,24 +25,29 @@
 
 #include <iostream>
 #include <cstdlib>
+#include <stdlib.h>
+
 using namespace std;
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main() {
 	
-	int i=0;
-	
-	for (int i=3; i<10; i++)
-	{
-		cout << "i = " << i 
- 		<< " squared = " 
- 		<< i * i 
-		<< endl; 
-	}
-	cout << "\nA program by: Jonathan Wen and Brian So!\n"; 
- 
+    int gc = 120;
+    int wi = 50;
+    int aw = 0;
+    int wc = 0;
+    unsigned int seed = 10;
+    if (aw = 0){
+       cout << "True Statement.";    
+    } else {
+      cout <<" False Statement.";
+    }
+
+
+    cout <<  srand(1);
  	system("pause"); 
  
  	return 0; 
 
 }
+
