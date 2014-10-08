@@ -1,0 +1,23 @@
+//*********************************************
+// Student1 Name: Brian So
+// Student1 Number: 20477254
+//
+// SYDE 121 Lab: 04 Assignment: 
+//
+// Filename: lab0403.txt
+// Date submitted: October 8, 2014
+//
+// We hereby declare that this code, submitted
+// for credit for the course SYDE121, is a product
+// of our own efforts. This coded solution has
+// not been plagiarized from other sources and
+// as not been knowingly plagiarized by others.
+//
+// Pair Programming Work Declaration:
+// Student1 Brian So Completed 100% of the assignment.
+//
+//*********************************************
+
+a) The largest value is 33
+b) The program retursn 0 as the factorial
+c) The largest value is 33
