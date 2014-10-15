@@ -4,7 +4,7 @@
 //
 // SYDE 121 Lab: 04 Assignment: 
 //
-// Filename: lab0404.cpp
+// Filename: lab040.cpp
 // Date submitted: October 8, 2014
 //
 // We hereby declare that this code, submitted
