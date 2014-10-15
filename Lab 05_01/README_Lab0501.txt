@@ -5,7 +5,7 @@
 // SYDE 121 Lab: 05 Assignment: 
 //
 // Filename: README_Lab0501.txt
-// Date submitted: October 14, 2014
+// Date submitted: October 15, 2014
 //
 // We hereby declare that this code, submitted
 // for credit for the course SYDE121, is a product
