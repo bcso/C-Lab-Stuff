@@ -41,7 +41,7 @@ int checkQuadrant(int choice){
 		//adjust to 3rd quadrant
 		quadrant = 3;
 	} else if ((choice >= 13) && (choice <=16)){
-		//adjust to 2nd quadrant
+		//adjust to 2 quadrant
 		quadrant = 2;
 	}
 	return quadrant;
