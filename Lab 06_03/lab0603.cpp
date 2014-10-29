@@ -1,3 +1,27 @@
+//********************************************* 
+// Student1 Name: Brian So	
+// Student1 Number: 20477254
+// 
+// Student2 Name: Wayne Wu
+// Student2 Number: 20563585
+// 
+// SYDE 121 Lab: 06 Assignment: 03
+// 
+// Filename: lab0603
+// Date submitted: 29/10/14
+// 
+// We hereby declare that this code, submitted 
+// for credit for the course SYDE121, is a product 
+// of our own efforts. This coded solution has 
+// not been plagiarized from other sources and 
+// as not been knowingly plagiarized by others. 
+// 
+// Pair Programming Work Declaration: 
+// Wayne Wu Completed 50% of the assignment. 
+// Brian So Completed 50% of the assignment. 
+// 
+//*********************************************
+
 #include <iostream>
 #include <cmath>
 #define PI 3.1415926535
@@ -5,23 +29,56 @@ using namespace std;
 const double radToDeg = 180.0/PI;
 const double degToRad = PI/180;
 
-//Calculate the resulting Bearing
-double calcResultBearing(bool windCheck, double inputBearing, double planeAirSpeed, double windSpeed){
+
+//check quadrants
+int checkQuadrant(int choice){
+	//Assume rBearing is in degrees now
+	int quadrant = 1;
+	if ((choice >= 5) && (choice <=8)){
+		//adjust to 4th quadrant
+		quadrant = 4;
+	} else if ((choice >= 9) && (choice <=12)){
+		//adjust to 3rd quadrant
+		quadrant = 3;
+	} else if ((choice >= 13) && (choice <=16)){
+		//adjust to 2nd quadrant
+		quadrant = 2;
+	}
+	return quadrant;
+}
+
+//Calculate the resulting Bearing (the heading)
+double calcResultHeading(bool windCheck, double inputBearing, double planeAirSpeed, double windSpeed, int choice){
 	double rBearing = 0;
 	double bearing1 = 0;
+	int quadrant = 0;
+	quadrant = checkQuadrant(choice);
 
 	//windCheck = 1 --> wind is +ve
 	if (windCheck){
 		cout <<"wind is +ve" <<endl;
 		bearing1 = asin((windSpeed*(sin(inputBearing)))/planeAirSpeed);
-		rBearing = inputBearing + bearing1;
+
+		if ((quadrant==4)||(quadrant==3)){
+			rBearing = inputBearing - bearing1;
+		} else {
+			rBearing = inputBearing + bearing1;
+		}
 
 	} else {
 		//windCheck = 0 --> wind is -ve
 		cout <<"wind is -ve" <<endl;
 		bearing1 = asin((windSpeed*(sin(PI - inputBearing)))/planeAirSpeed);
 		rBearing = inputBearing - bearing1;
+		if ((quadrant==1)||(quadrant==2)){
+			rBearing = inputBearing - bearing1;
+		} else {
+			rBearing = inputBearing + bearing1;
+		}		
 	}
+	cout << "bearing1:" << bearing1 * radToDeg << endl;
+	cout << "inputBearing:" << inputBearing* radToDeg << endl;
+	cout << "rBearing: " << rBearing* radToDeg << endl;	
 	return rBearing;
 }
 
@@ -124,14 +181,16 @@ double stillDirection(int choice){
 //Helper function to orient the resulting vector to be measured relative to East
 double orient(double rBearing, int choice){
 	//Assume rBearing is in degrees now
+	int quadrant = 0;
+	quadrant = checkQuadrant(choice);
 
-	if ((choice >= 5) || (choice <=8)){
+	if (quadrant == 4){
 		//adjust to 4th quadrant
-		rBearing = rBearing + 90.0;
-	} else if ((choice >= 9) || (choice <=12)){
-		rBearing = rBearing + 180.0;
-	} else if ((choice >= 13) || (choice <=16)){
-		rBearing = rBearing + 270.0;
+		rBearing = 180 - rBearing;
+	} else if (quadrant == 3){
+		rBearing = 180 + rBearing;
+	} else if (quadrant == 2){
+		rBearing = 360 - rBearing;
 	}
 	return rBearing;
 }
@@ -198,11 +257,11 @@ int main(){
 
 	cout << "original flight heading = (deg)" << inputBearing*radToDeg << " (rad)" <<inputBearing<< endl<<endl;
 
-	rBearing = calcResultBearing(windCheck, inputBearing, planeAirSpeed, windSpeed); //returns rad
+	rBearing = calcResultHeading(windCheck, inputBearing, planeAirSpeed, windSpeed, choice); //returns rad
 	rSpeed = calcResultSpeed(windCheck, rBearing, inputBearing, planeAirSpeed);
 	rTime = calcResultTime(dIN, rSpeed);
 
-	cout << "rBearing: " << orient(rBearing*radToDeg) << endl; //orient the calculation to be relative to the eastward direction
+	cout << "rBearing: " << orient(rBearing*radToDeg, choice) << endl; //orient the calculation to be relative to the eastward direction
 	cout << "rTime: " << rTime << endl;
 
 	system("PAUSE");
