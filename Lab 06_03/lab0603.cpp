@@ -261,8 +261,8 @@ int main(){
 	rSpeed = calcResultSpeed(windCheck, rBearing, inputBearing, planeAirSpeed);
 	rTime = calcResultTime(dIN, rSpeed);
 
-	cout << "rBearing: " << orient(rBearing*radToDeg, choice) << endl; //orient the calculation to be relative to the eastward direction
-	cout << "rTime: " << rTime << endl;
+	cout << "Adjusted Heading (relative to east): " << orient(rBearing*radToDeg, choice) << endl; //orient the calculation to be relative to the eastward direction
+	cout << "Adjusted time to destination: " << rTime << endl;
 
 	system("PAUSE");
 	return 0;
