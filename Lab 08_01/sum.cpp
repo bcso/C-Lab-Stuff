@@ -23,22 +23,26 @@ int main(int argc, char const *argv[])
 	int count1 = 0;
 	int count2 = 0;
 
-	
 	while (exitCheck != exit_char){ 
-        int * firstNumber = new int[arraysize]; //declare new output array of ints
-    	int * secondNumber = new int[arraysize]; //declare new output array of ints          
+        int firstNumber[arraysize];  //declare new output array of ints
+       	int secondNumber[arraysize];  //declare new output array of ints
+        count1 = 0;
+        count2 = 0;
 		switched = false;
 		stay = false;
-		cout << endl<< "Enter first number less than 20 digits" << endl;
+		cout << endl<< "Enter first number less than 20 digits (q to quit)" << endl;
 		do {
 			cin.get(x);
 
+            //Check for user quitting
+            if (x == 'q'){
+				exitCheck = x;
+				break;
+            }
+            
 			//stay premanently switches to true if first integer after leading zero is detected
 			if ((((x - '0')<1) || ((x - '0')>9)) && (switched == false)){
 				switched = false;
-			} else if (x == 'q'){
-				exitCheck = x;
-				break;
 			} else {
 				switched = true;
 				stay = true;
@@ -67,11 +71,15 @@ int main(int argc, char const *argv[])
 		do {
 			cin.get(x);
 
+            //Check for user quitting
+            if (x == 'q'){
+				exitCheck = x;
+				break;
+            }
+            
 			//stay premanently switches to true if first integer after leading zero is detected
 			if ((((x - '0')<1) || ((x - '0')>9)) && (switched == false)){
 				switched = false;
-			} else if (x == 'q'){
-				break;
 			} else {
 				switched = true;
 				stay = true;
@@ -94,11 +102,7 @@ int main(int argc, char const *argv[])
 		displayInput(secondNumber, count2);
 
         //Compute the numbers now .
-        compute(firstNumber, secondNumber, count1, count2);
-
-        //Clear the memory
-        delete[] firstNumber;     
-        delete[] secondNumber;        
+        compute(firstNumber, secondNumber, count1, count2);      
 	}
 	system("PAUSE");
 	return EXIT_SUCCESS;

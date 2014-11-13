@@ -9,7 +9,6 @@ using namespace std;
 void displayInput(int input[], int size){
 
 	if (size < 18){
-		cout << "Integer size: " << size << endl;
 		cout << "You have inputted: ";
 		for (int i = 0; i  < size ; i++){
 			cout << input[i];
@@ -50,9 +49,9 @@ void compute(int firstNumber[], int secondNumber[], int count1, int count2){
             convert.str("");
              sumIndex = count1; //Account for the one extra possible digit
              
-             cout << endl <<"firstNumber[" << i << "]" << " is " << firstNumber[i] << endl;
+             /*cout << endl <<"firstNumber[" << i << "]" << " is " << firstNumber[i] << endl;
              cout <<"secondNumber[" << addendDigit << "]" << " is " << secondNumber[addendDigit] << endl;        
-             cout <<"carry" << " is " << carry << endl;         
+             cout <<"carry" << " is " << carry << endl; */        
              
              //Do the adding of digits + carry logic 
              thisSum = add(firstNumber[i], secondNumber[addendDigit], carry);             
@@ -99,9 +98,9 @@ void compute(int firstNumber[], int secondNumber[], int count1, int count2){
             convert.str("");
              sumIndex = count2; //Account for the one extra possible digit
              
-             cout << endl <<"firstNumber[" << i << "]" << " is " << firstNumber[i] << endl;
+             /*cout << endl <<"firstNumber[" << i << "]" << " is " << firstNumber[i] << endl;
              cout <<"secondNumber[" << addendDigit << "]" << " is " << secondNumber[addendDigit] << endl;        
-             cout <<"carry" << " is " << carry << endl;         
+             cout <<"carry" << " is " << carry << endl;*/
              
              //Do the adding of digits + carry logic 
              thisSum = secondNumber[i] + firstNumber[addendDigit] + carry;
