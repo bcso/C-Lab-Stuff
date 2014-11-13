@@ -9,31 +9,24 @@ const char exit_char = 'q';
 int main(int argc, char const *argv[])
 {
 	
-	//Exit character checker
 	char exitCheck;
-	
-	//Input checker
 	char x;
-	
-	//Booleans to take care of leading zero/non valid inputs
 	bool switched = false;
 	bool stay = false;
-	
-	//Two counters for digits
+	int firstNumber[arraysize]; //declare new output array of ints
+	int secondNumber[arraysize]; //declare new output array of ints
 	int count1 = 0;
 	int count2 = 0;
+	while (exitCheck != exit_char){
 
-	
-	while (exitCheck != exit_char){ 
-        int * firstNumber = new int[arraysize]; //declare new output array of ints
-    	int * secondNumber = new int[arraysize]; //declare new output array of ints          
+
 		switched = false;
 		stay = false;
-		cout << endl<< "Enter first number less than 20 digits" << endl;
+		cout << "Enter first number less than 20 digits" << endl;
 		do {
 			cin.get(x);
 
-			//stay premanently switches to true if first integer after leading zero is detected
+			//switched premanently switches to true if first integer after leading zero is detected
 			if ((((x - '0')<1) || ((x - '0')>9)) && (switched == false)){
 				switched = false;
 			} else if (x == 'q'){
@@ -52,8 +45,7 @@ int main(int argc, char const *argv[])
 				}
 			} 
 		} while(x != '\n');
-        
-        //Check if the user wants to quit in the first round
+
 		if (exitCheck == exit_char){
 			break;
 		}
@@ -63,11 +55,11 @@ int main(int argc, char const *argv[])
 		// Reset switches for second number
 		switched = false;
 		stay = false;
-		cout << endl<<"Enter second number less than 20 digits" << endl;
+		cout << "Enter second number less than 20 digits" << endl;
 		do {
 			cin.get(x);
 
-			//stay premanently switches to true if first integer after leading zero is detected
+			//switched premanently switches to true if first integer after leading zero is detected
 			if ((((x - '0')<1) || ((x - '0')>9)) && (switched == false)){
 				switched = false;
 			} else if (x == 'q'){
@@ -86,20 +78,13 @@ int main(int argc, char const *argv[])
 			} 
 		} while(x != '\n');
 
-        //Check if the user wants to quit in the second round
 		if (exitCheck == exit_char){
 			break;
 		}
 
 		displayInput(secondNumber, count2);
 
-        //Compute the numbers now .
-        compute(firstNumber, secondNumber, count1, count2);
 
-        //Clear the memory
-        delete[] firstNumber;     
-        delete[] secondNumber;        
 	}
-	system("PAUSE");
-	return EXIT_SUCCESS;
+	return 0;
 }
