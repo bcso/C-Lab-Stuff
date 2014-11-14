@@ -72,11 +72,7 @@ void compute(int firstNumber[], int secondNumber[], int count1, int count2){
             //reset the temp string vars and string buffers for writing
             tempString = "";
             convert.str("");
-             sumIndex = count1; //Account for the one extra possible digit
-             
-             /*cout << endl <<"firstNumber[" << i << "]" << " is " << firstNumber[i] << endl;
-             cout <<"secondNumber[" << addendDigit << "]" << " is " << secondNumber[addendDigit] << endl;        
-             cout <<"carry" << " is " << carry << endl; */        
+             sumIndex = count1; //Account for the one extra possible digit    
              
              //Do the adding of digits + carry logic 
              thisSum = add(firstNumber[i], secondNumber[addendDigit], carry);             
@@ -122,10 +118,6 @@ void compute(int firstNumber[], int secondNumber[], int count1, int count2){
             tempString = "";
             convert.str("");
              sumIndex = count2; //Account for the one extra possible digit
-             
-             /*cout << endl <<"firstNumber[" << i << "]" << " is " << firstNumber[i] << endl;
-             cout <<"secondNumber[" << addendDigit << "]" << " is " << secondNumber[addendDigit] << endl;        
-             cout <<"carry" << " is " << carry << endl;*/
              
              //Do the adding of digits + carry logic 
              thisSum = secondNumber[i] + firstNumber[addendDigit] + carry;
