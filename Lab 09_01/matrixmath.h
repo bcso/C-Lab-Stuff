@@ -17,6 +17,8 @@ struct matrix_struct{
 
 void read_file(matrix_struct matrix[]);
 
+void write_file(int matrixSize[], int resultMatrix[][100]);
+
 bool valid_check (matrix_struct matrix[]);
 
 void echoe_input (matrix_struct matrix[]);

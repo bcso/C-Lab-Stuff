@@ -7,6 +7,7 @@ using namespace std;
 //Calcualte the matrix result
 void calculateMatrix(int matrix1[][100], int matrix2[][100], int matrixSize[], int resultMatrix[][100]){
 
+	//Declare the row sizes
 	int rowSize1 = matrixSize[0]; // i
 	int colSize1 = matrixSize[1]; // j
 	int rowSize2 = matrixSize[2]; // m
@@ -24,23 +25,40 @@ void calculateMatrix(int matrix1[][100], int matrix2[][100], int matrixSize[], i
 		}
 		
 	}
+}
 
-	cout << endl << "I am the answer: " << endl;
+
+void write_file(int matrixSize[], int resultMatrix[][100]){
+	//Write to a file
+	char out_file_name[20];
+	ofstream out_stream;
+	cout << "Enter the output file name (maximum of 20 characters): ";
+	cin >> out_file_name;
+
+	out_stream.open(out_file_name);
+
+	int rowSize1 = matrixSize[0]; // i
+	int colSize1 = matrixSize[1]; // j
+	int rowSize2 = matrixSize[2]; // m
+	int colSize2 = matrixSize[3]; // n		
+
 	for (int i = 0; i < rowSize1; i++){
 		for (int n = 0; n < colSize2; n++){
-			cout << resultMatrix[i][n] << " ";
+			out_stream << resultMatrix[i][n] << " ";
 		}
-		cout << endl;
+		out_stream << endl;
 	}
+
+	cout << "Output writen to file." << endl;
+	out_stream.close();
 }
 
 void read_file(matrix_struct matrix[]) { 
-	char in_file_name[20], out_file_name[20];
+	char in_file_name[20];
 	ifstream in_stream; 
 	cout << "Enter the input file name (maximum of 20 characters): "; 
 	cin >> in_file_name;
-	cout << "Enter the output file name (maximum of 20 characters): ";
-	cin >> out_file_name; 
+
 	
 	in_stream.open(in_file_name);
 	
