@@ -11,30 +11,30 @@ int main(int argc, char const *argv[])
     Pyramid my_pyramid;
     Triangle my_triangle;
 
-	// my_square.defineSize();
-	// my_square.defineFill();
+	my_square.defineSize();
+	my_square.defineFill();
 
-	// bool squareFill = my_square.getIsFilled();
-	// int squareSize = my_square.getSize();
+	bool squareFill = my_square.getIsFilled();
+	int squareSize = my_square.getSize();
 
-	// cout << "my_square is of size " << squareSize << " and has fill of " << squareFill <<endl;
+	cout << "my_square is of size " << squareSize << " and has fill of " << squareFill <<endl;
 
 
-	// my_diamond.defineSize();
-	// my_diamond.defineFill();
+	my_diamond.defineSize();
+	my_diamond.defineFill();
 
-	// bool diamondFill = my_diamond.getIsFilled();
-	// int diamondSize = my_diamond.getSize();
+	bool diamondFill = my_diamond.getIsFilled();
+	int diamondSize = my_diamond.getSize();
 
-	// cout << "my_diamond is of size " << diamondSize << " and has fill of " << diamondFill <<endl;
+	cout << "my_diamond is of size " << diamondSize << " and has fill of " << diamondFill <<endl;
 
-	// my_pyramid.defineSize();
-	// my_pyramid.defineFill();
+	my_pyramid.defineSize();
+	my_pyramid.defineFill();
 
-	// bool pyramidFill = my_pyramid.getIsFilled();
-	// int pyramidSize = my_pyramid.getSize();
+	bool pyramidFill = my_pyramid.getIsFilled();
+	int pyramidSize = my_pyramid.getSize();
 
-	// cout << "my_pyramid is of size " << pyramidSize << " and has fill of " << pyramidFill <<endl;
+	cout << "my_pyramid is of size " << pyramidSize << " and has fill of " << pyramidFill <<endl;
 
 
 	my_triangle.defineSize();
