@@ -27,7 +27,7 @@ class Shape{
 
 class Square: public Shape{
 	public:
- 		Square( void ); // default constructor
+ 		Square(); // default constructor
  		void defineSize();
  		void printFilledShape( ofstream& out_stream );
  		void printHollowShape( ofstream& out_stream ); 
@@ -35,7 +35,7 @@ class Square: public Shape{
 
 class Diamond: public Shape{
 	public:
- 		Diamond( void ); // default constructor
+ 		Diamond(); // default constructor
  		void defineSize();
  		void printFilledShape( ofstream& out_stream );
  		void printHollowShape( ofstream& out_stream ); 
@@ -43,7 +43,7 @@ class Diamond: public Shape{
 
 class Pyramid: public Shape{
 	public:
- 		Pyramid( void ); // default constructor
+ 		Pyramid(); // default constructor
  		void defineSize();
  		void printFilledShape( ofstream& out_stream );
  		void printHollowShape( ofstream& out_stream ); 
@@ -51,7 +51,7 @@ class Pyramid: public Shape{
 
 class Triangle: public Shape{
 	public:
- 		Triangle( void ); // default constructor
+ 		Triangle(); // default constructor
  		void defineSize();
  		void printFilledShape( ofstream& out_stream );
  		void printHollowShape( ofstream& out_stream ); 
